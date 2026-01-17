@@ -23,7 +23,6 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- PWA Meta Tags -->
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#14532d" />
   </head>
@@ -48,21 +47,17 @@
       <div
         class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3"
       >
-        <!-- Logo -->
         <div class="text-white text-2xl font-bold">Misra Paan</div>
 
         <!-- MOBILE MENU -->
         <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-50 hidden">
           <div
-            class="absolute right-0 top-0 h-full w-72 bg-green-900 p-6 transform translate-x-full transition duration-300"
             id="menuPanel"
+            class="absolute right-0 top-0 h-full w-72 bg-green-900 p-6 transform translate-x-full transition duration-300"
           >
-            <!-- Close -->
             <button id="closeMenu" class="text-white text-2xl mb-6">
               <i class="fas fa-times"></i>
             </button>
-
-            <!-- Menu Links -->
             <nav class="flex flex-col gap-6 text-white text-lg font-medium">
               <a href="#">Home</a>
               <a href="#">Categories</a>
@@ -74,15 +69,13 @@
           </div>
         </div>
 
-        <!-- Desktop Menu -->
         <nav class="hidden md:flex space-x-6 text-white font-medium">
-          <a href="#" class="ripple-link px-4 py-2"><span>Home</span></a>
-          <a href="#" class="ripple-link px-4 py-2"><span>Products</span></a>
-          <a href="#" class="ripple-link px-4 py-2"><span>About</span></a>
-          <a href="#" class="ripple-link px-4 py-2"><span>Contact</span></a>
+          <a href="#" class="ripple-link px-4 py-2">Home</a>
+          <a href="#" class="ripple-link px-4 py-2">Products</a>
+          <a href="#" class="ripple-link px-4 py-2">About</a>
+          <a href="#" class="ripple-link px-4 py-2">Contact</a>
         </nav>
 
-        <!-- Mobile Hamburger -->
         <button id="openMenu" class="md:hidden text-white text-2xl">
           <i class="fas fa-bars"></i>
         </button>
@@ -662,6 +655,42 @@
         © 2026 Misra Paan Bhandar. All Rights Reserved.
       </div>
     </footer>
+
+    <!-- MOBILE BOTTOM NAV -->
+    <nav
+      class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg z-50 md:hidden"
+    >
+      <div class="flex justify-around items-center py-2 text-gray-600 text-xs">
+        <a href="#" class="flex flex-col items-center gap-1 text-green-600">
+          <i class="fas fa-house text-lg"></i>
+          <span>Home</span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center gap-1">
+          <i class="fas fa-th-large text-lg"></i>
+          <span>Category</span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center gap-1 relative">
+          <i class="fas fa-shopping-cart text-lg"></i>
+          <span>Cart</span>
+          <span
+            class="absolute -top-1 right-2 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center"
+            >3</span
+          >
+        </a>
+
+        <a href="#" class="flex flex-col items-center gap-1">
+          <i class="far fa-heart text-lg"></i>
+          <span>Wishlist</span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center gap-1">
+          <i class="far fa-user text-lg"></i>
+          <span>Profile</span>
+        </a>
+      </div>
+    </nav>
 
     <script>
       const openBtn = document.getElementById("openMenu");
