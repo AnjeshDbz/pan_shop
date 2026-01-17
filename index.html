@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <title>Paan Shop Website</title>
@@ -102,6 +102,7 @@
           </p>
 
           <button
+            onclick="document.getElementById('categories').scrollIntoView({behavior: 'smooth'})"
             class="bg-lime-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-lime-400 transition"
           >
             Visit Now →
@@ -121,6 +122,9 @@
             src="https://images.pexels.com/photos/17356851/pexels-photo-17356851.jpeg"
             alt="Misra Paan Bhandar"
             class="rounded-lg shadow-lg w-full object-cover"
+            loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
 
@@ -180,7 +184,7 @@
     </section>
 
     <!-- CATEGORIES SECTION -->
-    <section class="py-20 bg-[#f9faf9] relative overflow-hidden">
+    <section id="categories" class="py-20 bg-[#f9faf9] relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 text-center">
         <p class="text-green-600 italic mb-2">~ Categories ~</p>
 
@@ -199,6 +203,9 @@
               <img
                 src="https://thumbs.dreamstime.com/b/vibrant-betel-leaf-sweet-mixture-isolated-transparent-background-top-down-view-fresh-green-holding-colorful-405530189.jpg"
                 class="h-28 mx-auto mb-4 object-contain"
+                loading="lazy"
+                width="200"
+                height="200"
               />
               <h3 class="text-xl font-bold mb-2">Banaras Paan</h3>
               <p class="text-gray-600 text-sm mb-6">
@@ -621,6 +628,9 @@
             <img
               src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
               class="rounded-md"
+              loading="lazy"
+              width="150"
+              height="150"
             />
             <img
               src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
@@ -707,6 +717,14 @@
         panel.classList.add("translate-x-full");
         setTimeout(() => menu.classList.add("hidden"), 300);
       };
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((reg) => console.log("SW registered!", reg))
+            .catch((err) => console.log("SW registration failed", err));
+        });
+      }
     </script>
   </body>
 </html>
