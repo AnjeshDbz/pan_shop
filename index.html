@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Paan Shop Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#14532d" />
+  </head>
+
+  <body class="bg-white">
+    <!-- TOP BAR -->
+    <div class="bg-green-700 text-white text-sm">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 py-2"
+      >
+        <p>Welcome to The Complete Paan Shop!</p>
+        <button
+          class="bg-lime-400 text-black px-4 py-1 rounded-full font-semibold"
+        >
+          Store Locator
+        </button>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="bg-green-800 sticky top-0 z-50 shadow">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3"
+      >
+        <!-- Logo -->
+        <div class="text-white text-2xl font-bold">Misra Paan</div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-50 hidden">
+          <div
+            class="absolute right-0 top-0 h-full w-72 bg-green-900 p-6 transform translate-x-full transition duration-300"
+            id="menuPanel"
+          >
+            <!-- Close -->
+            <button id="closeMenu" class="text-white text-2xl mb-6">
+              <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Menu Links -->
+            <nav class="flex flex-col gap-6 text-white text-lg font-medium">
+              <a href="#">Home</a>
+              <a href="#">Categories</a>
+              <a href="#">Cart</a>
+              <a href="#">Wishlist</a>
+              <a href="#">Profile</a>
+              <a href="#">Contact</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 text-white font-medium">
+          <a href="#" class="ripple-link px-4 py-2"><span>Home</span></a>
+          <a href="#" class="ripple-link px-4 py-2"><span>Products</span></a>
+          <a href="#" class="ripple-link px-4 py-2"><span>About</span></a>
+          <a href="#" class="ripple-link px-4 py-2"><span>Contact</span></a>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="openMenu" class="md:hidden text-white text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="bg-cover bg-center text-white"
+      style="
+        background-image: url(&quot;https://images.pexels.com/photos/17356851/pexels-photo-17356851.jpeg&quot;);
+      "
+    >
+      <div class="bg-black/60">
+        <div class="max-w-7xl mx-auto px-6 py-28">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Now Serving <br />
+            In the Heart <br />
+            Of Hinjewadi!
+          </h1>
+
+          <p class="max-w-xl text-gray-200 mb-8">
+            Taste the timeless legacy at Shaukeen Family Paan Shop.
+          </p>
+
+          <button
+            class="bg-lime-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-lime-400 transition"
+          >
+            Visit Now →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="py-16 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <!-- Left Image -->
+        <div>
+          <img
+            src="https://images.pexels.com/photos/17356851/pexels-photo-17356851.jpeg"
+            alt="Misra Paan Bhandar"
+            class="rounded-lg shadow-lg w-full object-cover"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div>
+          <p class="text-red-600 font-medium italic mb-2">
+            ~ About Misra Paan Bhandar ~
+          </p>
+
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Pune’s First in Paan Makeover
+          </h2>
+
+          <p class="text-lg text-gray-700 mb-4">
+            Nurturing the age-old paan culture through the 21st century
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            When we call ourselves a complete family paan shop, we genuinely
+            mean it. From kids to their grandparents, Misra Paan Bhandar serves
+            everyone with special paan varieties crafted with tradition and
+            care.
+          </p>
+
+          <!-- Features -->
+          <div class="grid sm:grid-cols-2 gap-6 mt-6">
+            <!-- Feature 1 -->
+            <div class="flex gap-4">
+              <div class="text-green-600 text-4xl">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Why Misra?</h4>
+                <p class="text-gray-600 text-sm">
+                  Much beyond the usual masala, sadha, maghai, kalkatta,
+                  banarasi, chocolate...
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex gap-4">
+              <div class="text-green-600 text-4xl">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Paan Speciality</h4>
+                <p class="text-gray-600 text-sm">
+                  An exciting menu to choose from – including zero-tobacco
+                  varieties.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="py-20 bg-[#f9faf9] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-green-600 italic mb-2">~ Categories ~</p>
+
+        <h2 class="text-4xl font-bold text-gray-900 mb-14">
+          Flavours in Paan that are Worth <br />
+          Indulging in!
+        </h2>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Card -->
+          <div
+            class="bg-white shadow-lg rounded-xl p-6 border border-green-100 hover:-translate-y-2 transition duration-300"
+          >
+            <div class="border border-green-200 rounded-lg p-6">
+              <img
+                src="https://thumbs.dreamstime.com/b/vibrant-betel-leaf-sweet-mixture-isolated-transparent-background-top-down-view-fresh-green-holding-colorful-405530189.jpg"
+                class="h-28 mx-auto mb-4 object-contain"
+              />
+              <h3 class="text-xl font-bold mb-2">Banaras Paan</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                The same old classic to take you down the memory lane...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 font-semibold text-green-700"
+              >
+                <span
+                  class="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                View Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-white shadow-lg rounded-xl p-6 border border-green-100 hover:-translate-y-2 transition duration-300"
+          >
+            <div class="border border-green-200 rounded-lg p-6">
+              <img
+                src="https://thumbs.dreamstime.com/b/vibrant-betel-leaf-sweet-mixture-isolated-transparent-background-top-down-view-fresh-green-holding-colorful-405530189.jpg"
+                class="h-28 mx-auto mb-4 object-contain"
+              />
+              <h3 class="text-xl font-bold mb-2">Maghai Paan</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                Purchasing from select family farmers who farm organically.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 font-semibold text-green-700"
+              >
+                <span
+                  class="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                View Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-white shadow-lg rounded-xl p-6 border border-green-100 hover:-translate-y-2 transition duration-300"
+          >
+            <div class="border border-green-200 rounded-lg p-6">
+              <img
+                src="https://thumbs.dreamstime.com/b/vibrant-betel-leaf-sweet-mixture-isolated-transparent-background-top-down-view-fresh-green-holding-colorful-405530189.jpg"
+                class="h-28 mx-auto mb-4 object-contain"
+              />
+              <h3 class="text-xl font-bold mb-2">Puneri Paan</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                Crafted with freshness and heritage taste experience.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 font-semibold text-green-700"
+              >
+                <span
+                  class="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                View Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-white shadow-lg rounded-xl p-6 border border-green-100 hover:-translate-y-2 transition duration-300"
+          >
+            <div class="border border-green-200 rounded-lg p-6">
+              <img
+                src="https://thumbs.dreamstime.com/b/vibrant-betel-leaf-sweet-mixture-isolated-transparent-background-top-down-view-fresh-green-holding-colorful-405530189.jpg"
+                class="h-28 mx-auto mb-4 object-contain"
+              />
+              <h3 class="text-xl font-bold mb-2">Fancy Paan</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                A modern twist to traditional flavours you will love.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 font-semibold text-green-700"
+              >
+                <span
+                  class="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                View Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES + CONTENT SECTION WITH GLASS BACKGROUND -->
+    <section
+      class="py-20 bg-cover bg-center relative"
+      style="
+        background-image: url(&quot;https://www.tajwithguide.com/blog/wp-content/uploads/paan-fb_011018085958.jpg&quot;);
+      "
+    >
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div
+        class="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center"
+      >
+        <!-- LEFT FEATURES GRID (Glass Cards) -->
+        <div class="grid sm:grid-cols-2 gap-8">
+          <!-- Card -->
+          <div
+            class="backdrop-blur-md bg-white/80 p-8 text-center rounded-xl shadow-lg"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center"
+            >
+              <div
+                class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white text-xl"
+              >
+                <i class="fas fa-award"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Best Quality</h3>
+            <p class="text-gray-600 text-sm">
+              Best-quality betel leaves hand-picked for you
+            </p>
+          </div>
+
+          <div
+            class="backdrop-blur-md bg-white/80 p-8 text-center rounded-xl shadow-lg"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center"
+            >
+              <div
+                class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white text-xl"
+              >
+                <i class="fas fa-droplet"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">100% Fresh</h3>
+            <p class="text-gray-600 text-sm">
+              Fresh, clean, and hygienic preparations
+            </p>
+          </div>
+
+          <div
+            class="backdrop-blur-md bg-white/80 p-8 text-center rounded-xl shadow-lg"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center"
+            >
+              <div
+                class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white text-xl"
+              >
+                <i class="fas fa-face-smile"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Best Taste</h3>
+            <p class="text-gray-600 text-sm">
+              Seasoned experts to craft desired tastes
+            </p>
+          </div>
+
+          <div
+            class="backdrop-blur-md bg-white/80 p-8 text-center rounded-xl shadow-lg"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center"
+            >
+              <div
+                class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white text-xl"
+              >
+                <i class="fas fa-leaf"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Top Paan Varieties</h3>
+            <p class="text-gray-600 text-sm">
+              Tempting paan varieties on the table
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT (Glass Panel) -->
+        <div class="backdrop-blur-md bg-white/80 p-10 rounded-xl shadow-lg">
+          <p class="text-red-500 italic mb-2">~ The Post-meal Ritual ~</p>
+
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Paan Lovers’ Own Paradise
+          </h2>
+
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Misra Paan Bhandar has come a long way to become a trusted name in
+            paan, delighting customers with best quality leaves, natural
+            ingredients, and unmatched taste experience.
+          </p>
+
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            With a wide range of paan varieties and online delivery, Misra Paan
+            Bhandar now reaches more customers across cities to serve happiness
+            in every bite.
+          </p>
+
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition"
+          >
+            Know More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM STATS SECTION -->
+    <section class="relative bg-cover bg-center">
+      <!-- Light overlay for better contrast -->
+      <div class="absolute inset-0 bg-white/60"></div>
+
+      <div class="relative py-20">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center"
+          >
+            <!-- Stat -->
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center shadow-sm"
+              >
+                <i class="fas fa-user-tie text-green-600 text-3xl"></i>
+              </div>
+              <h3 class="text-4xl font-bold text-gray-900">
+                15<span class="text-green-600">+</span>
+              </h3>
+              <p class="text-gray-700 font-medium">Years Experience</p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center shadow-sm"
+              >
+                <i class="fas fa-leaf text-green-600 text-3xl"></i>
+              </div>
+              <h3 class="text-4xl font-bold text-gray-900">
+                30<span class="text-green-600">+</span>
+              </h3>
+              <p class="text-gray-700 font-medium">Paan Varieties</p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center shadow-sm"
+              >
+                <i class="fas fa-store text-green-600 text-3xl"></i>
+              </div>
+              <h3 class="text-4xl font-bold text-gray-900">
+                10<span class="text-green-600">+</span>
+              </h3>
+              <p class="text-gray-700 font-medium">Franchise Outlets</p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center shadow-sm"
+              >
+                <i class="fas fa-award text-green-600 text-3xl"></i>
+              </div>
+              <h3 class="text-4xl font-bold text-gray-900">
+                10<span class="text-green-600">+</span>
+              </h3>
+              <p class="text-gray-700 font-medium">Awards Winning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANCHES / FRANCHISE SECTION -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <!-- Small title -->
+        <p class="text-red-500 italic mb-2">~ Franchise ~</p>
+
+        <!-- Main title -->
+        <h2 class="text-4xl font-bold text-gray-900 mb-14">Our Branches</h2>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+          <!-- Card 1 -->
+          <div
+            class="bg-green-700 rounded-xl p-10 shadow-lg flex items-center justify-center min-h-[260px] relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-3 border border-green-400 rounded-lg"
+            ></div>
+            <div class="relative text-center text-white">
+              <h3 class="text-2xl font-semibold">Nalasopara</h3>
+              <p class="text-sm opacity-80">(Head Shop)</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-green-700 rounded-xl p-10 shadow-lg flex items-center justify-center min-h-[260px] relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-3 border border-green-400 rounded-lg"
+            ></div>
+            <div class="relative text-center text-white">
+              <h3 class="text-2xl font-semibold">Hinjewadi</h3>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-green-700 rounded-xl p-10 shadow-lg flex items-center justify-center min-h-[260px] relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-3 border border-green-400 rounded-lg"
+            ></div>
+            <div class="relative text-center text-white">
+              <h3 class="text-2xl font-semibold">Mumbai</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dots (optional slider indicator look) -->
+        <div class="flex justify-center gap-2 mb-10">
+          <span class="w-2.5 h-2.5 bg-black rounded-full"></span>
+          <span class="w-2.5 h-2.5 bg-gray-300 rounded-full"></span>
+          <span class="w-2.5 h-2.5 bg-gray-300 rounded-full"></span>
+          <span class="w-2.5 h-2.5 bg-gray-300 rounded-full"></span>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="#" class="btn-holo inline-flex items-center gap-2">
+          Our Store Locator <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative bg-green-900 text-white">
+      <!-- Top paint texture feel -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-green-800 to-green-950 opacity-95"
+      ></div>
+
+      <div
+        class="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10"
+      >
+        <!-- Brand -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Misra Paan</h2>
+
+          <div class="flex gap-4 mb-4 text-xl">
+            <a href="#" class="hover:text-green-400"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="hover:text-green-400"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-green-400"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+
+          <p class="text-sm text-gray-200 leading-relaxed">
+            Misra Paan Bhandar, established with passion and tradition, has
+            grown into a trusted name for authentic paan experiences across the
+            city.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Links</h3>
+          <ul class="space-y-2 text-sm text-gray-200">
+            <li><a href="#" class="hover:text-green-400">› Home</a></li>
+            <li><a href="#" class="hover:text-green-400">› Our Products</a></li>
+            <li><a href="#" class="hover:text-green-400">› About Us</a></li>
+            <li><a href="#" class="hover:text-green-400">› Contact Us</a></li>
+            <li>
+              <a href="#" class="hover:text-green-400">› Store Locator</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact</h3>
+
+          <p class="text-sm text-gray-200 flex gap-2 mb-3">
+            <i class="fas fa-map-marker-alt text-green-400 mt-1"></i>
+            Minal Apartment, Karve Road, Nal Stop, Erandwane, Pune – 411004
+          </p>
+
+          <p class="text-sm text-gray-200 flex gap-2 mb-3">
+            <i class="fas fa-phone text-green-400 mt-1"></i>
+            +91 9604748180
+          </p>
+
+          <p class="text-sm text-white font-semibold mb-2">Open Hours:</p>
+          <p class="text-sm text-gray-200">Mon – Sun: 11:30 AM – 11:30 PM</p>
+        </div>
+
+        <!-- Instagram -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">misrapaanbhandar</h3>
+
+          <div class="grid grid-cols-3 gap-2 mb-4">
+            <img
+              src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
+              class="rounded-md"
+            />
+            <img
+              src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
+              class="rounded-md"
+            />
+            <img
+              src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
+              class="rounded-md"
+            />
+            <img
+              src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
+              class="rounded-md"
+            />
+            <img
+              src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
+              class="rounded-md"
+            />
+            <img
+              src="https://static.toiimg.com/thumb/imgsize-217843,msid-69026265/69026265.jpg?width=500&resizemode=4"
+              class="rounded-md"
+            />
+          </div>
+
+          <a href="#" class="btn-holo text-sm">Follow on Instagram</a>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div
+        class="relative border-t border-green-700 text-center py-4 text-sm text-gray-300"
+      >
+        © 2026 Misra Paan Bhandar. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script>
+      const openBtn = document.getElementById("openMenu");
+      const closeBtn = document.getElementById("closeMenu");
+      const menu = document.getElementById("mobileMenu");
+      const panel = document.getElementById("menuPanel");
+
+      openBtn.onclick = () => {
+        menu.classList.remove("hidden");
+        setTimeout(() => panel.classList.remove("translate-x-full"), 10);
+      };
+
+      closeBtn.onclick = () => {
+        panel.classList.add("translate-x-full");
+        setTimeout(() => menu.classList.add("hidden"), 300);
+      };
+    </script>
+  </body>
+</html>
