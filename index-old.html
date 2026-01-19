@@ -132,51 +132,108 @@
       </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative overflow-hidden text-white">
-      <!-- Background image -->
-      <div
-        class="absolute inset-0 bg-cover bg-center"
-        style="background-image: url(&quot;images/hero-paan.webp&quot;)"
-      ></div>
+    <!-- HERO -->
+    <section
+      class="bg-cover bg-center text-white"
+      style="background-image: url(images/hero-bg.webp)"
+    >
+      <div class="bg-black/60">
+        <div class="max-w-7xl mx-auto px-6 py-28">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Now Serving <br />
+            In the Heart <br />
+            Of Hinjewadi!
+          </h1>
 
-      <!-- Green overlay -->
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-green-900/80 via-green-800/85 to-green-900/90"
-      ></div>
+          <p class="max-w-xl text-gray-200 mb-8">
+            Taste the timeless legacy at Shaukeen Family Paan Shop.
+          </p>
 
-      <!-- Content -->
-      <div
-        class="relative max-w-7xl mx-auto px-4 py-10 md:py-20 flex flex-col items-center text-center"
-      >
-        <!-- Search bar -->
-        <div
-          class="bg-white rounded-full flex items-center px-5 py-3 w-full sm:w-4/5 md:w-3/5 shadow-xl mb-10"
-        >
-          <i class="fas fa-search text-gray-400 mr-3"></i>
-          <input
-            type="text"
-            placeholder="Search for your favourite Paan..."
-            class="flex-1 outline-none text-gray-700 text-sm bg-transparent"
-          />
-          <button class="text-green-600">
-            <i class="fas fa-microphone"></i>
+          <button
+            onclick="
+              document
+                .getElementById('categories')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+            class="bg-lime-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-lime-400 transition"
+          >
+            Visit Now →
           </button>
         </div>
-
-        <!-- Heading -->
-        <h1
-          class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight"
-        >
-          Fresh • Flavourful • <br />
-          <span class="text-lime-400">Fantastic Paan Bites</span>
-        </h1>
-
-        
       </div>
     </section>
 
     <!-- ABOUT SECTION -->
+    <section class="py-16 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <!-- Left Image -->
+        <div>
+          <img
+            src="images/about-img.webp"
+            alt="Misra Paan Bhandar"
+            class="rounded-lg shadow-lg w-full object-cover"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div>
+          <p class="text-green-600 font-medium italic mb-2">
+            ~ About Misra Paan Bhandar ~
+          </p>
+
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Pune’s First in Paan Makeover
+          </h2>
+
+          <p class="text-lg text-gray-700 mb-4">
+            Nurturing the age-old paan culture through the 21st century
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            When we call ourselves a complete family paan shop, we genuinely
+            mean it. From kids to their grandparents, Misra Paan Bhandar serves
+            everyone with special paan varieties crafted with tradition and
+            care.
+          </p>
+
+          <!-- Features -->
+          <div class="grid sm:grid-cols-2 gap-2 mt-6">
+            <!-- Feature 1 -->
+            <div class="flex gap-4 bg-[#f4f4f4] p-[10px] rounded-[10px]">
+              <div class="text-green-600 text-4xl">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Why Misra?</h4>
+                <p class="text-gray-600 text-sm">
+                  Much beyond the usual masala, sadha, maghai, kalkatta,
+                  banarasi, chocolate...
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex gap-4 bg-[#f4f4f4] p-[10px] rounded-[10px]">
+              <div class="text-green-600 text-4xl">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Paan Speciality</h4>
+                <p class="text-gray-600 text-sm">
+                  An exciting menu to choose from – including zero-tobacco
+                  varieties.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CATEGORIES SECTION -->
     <section
@@ -206,7 +263,7 @@
                 width="200"
                 height="200"
               />
-              <h3 class="text-md md:text-xl font-bold mb-2">Banaras Paan</h3>
+              <h3 class="text-lg md:text-xl font-bold mb-2">Banaras Paan</h3>
               <!-- <p class="text-gray-600 text-sm mb-6">
                 The same old classic to take you down the memory lane...
               </p>
@@ -234,7 +291,7 @@
                 alt="product-img"
                 class="h-28 mx-auto mb-4 object-contain"
               />
-              <h3 class="text-md md:text-xl font-bold mb-2">Maghai Paan</h3>
+              <h3 class="text-lg md:text-xl font-bold mb-2">Maghai Paan</h3>
               <!-- <p class="text-gray-600 text-sm mb-6">
                 Purchasing from select family farmers who farm organically.
               </p>
@@ -262,7 +319,7 @@
                 alt="product-img"
                 class="h-28 mx-auto mb-4 object-contain"
               />
-              <h3 class="text-md md:text-xl font-bold mb-2">Puneri Paan</h3>
+              <h3 class="text-lg md:text-xl font-bold mb-2">Puneri Paan</h3>
               <!-- <p class="text-gray-600 text-sm mb-6">
                 Crafted with freshness and heritage taste experience.
               </p>
@@ -290,7 +347,7 @@
                 alt="product-img"
                 class="h-28 mx-auto mb-4 object-contain"
               />
-              <h3 class="text-md md:text-xl font-bold mb-2">Fancy Paan</h3>
+              <h3 class="text-lg md:text-xl font-bold mb-2">Fancy Paan</h3>
               <!-- <p class="text-gray-600 text-sm mb-6">
                 A modern twist to traditional flavours you will love.
               </p>
